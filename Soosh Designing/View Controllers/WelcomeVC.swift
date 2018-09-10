@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WelcomeVC.swift
 //  Soosh Designing
 //
 //  Created by Ajinkya Sonar on 11/09/18.
@@ -12,13 +12,17 @@ class WelcomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
     
     @IBAction func getStartedBtnTapped(_ sender: UIButton) {
+        
+        let leagueVC = storyboard?.instantiateViewController(withIdentifier: "LeagueVC") as! LeagueVC
+        
+        navigationController?.pushViewController(leagueVC, animated: true)
+        
     }
     
 
-
 }
-
